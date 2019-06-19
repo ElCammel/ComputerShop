@@ -1,4 +1,4 @@
-﻿namespace ClientService
+﻿namespace Accounting
 {
     public class Address
     {
@@ -13,5 +13,6 @@
             this.street = street;
             this.PostalCode = postalCode;
         }
+
     }
 }

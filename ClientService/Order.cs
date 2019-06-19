@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ClientService
+namespace ShoppingService
 {
     public class Order
     {
