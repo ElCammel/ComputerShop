@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.271
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComputerShop", "ComputerShop\ComputerShop.csproj", "{981FE23F-5223-4048-B3FA-52851F8551BF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentService", "PaymentService\PaymentService.csproj", "{F36D7EE6-A72F-4E2C-BE7D-1D909A24CEB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounting", "Accounting\Accounting.csproj", "{807A551C-A720-4F4A-A702-8CF998898871}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Accounting", "Accounting\Accounting.csproj", "{807A551C-A720-4F4A-A702-8CF998898871}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingService", "ShoppingService\ShoppingService.csproj", "{F448B56E-EAA4-41F3-AB2F-E81E9A658E4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingService", "ShoppingService\ShoppingService.csproj", "{F448B56E-EAA4-41F3-AB2F-E81E9A658E4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PcBuilder", "..\..\..\Desktop\BurgerBuilder\PcBuilder.csproj", "{044135E5-F6B1-462E-83A0-0DF741EBAE6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F448B56E-EAA4-41F3-AB2F-E81E9A658E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F448B56E-EAA4-41F3-AB2F-E81E9A658E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F448B56E-EAA4-41F3-AB2F-E81E9A658E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{044135E5-F6B1-462E-83A0-0DF741EBAE6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{044135E5-F6B1-462E-83A0-0DF741EBAE6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{044135E5-F6B1-462E-83A0-0DF741EBAE6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{044135E5-F6B1-462E-83A0-0DF741EBAE6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
