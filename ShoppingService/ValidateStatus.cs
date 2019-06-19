@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shopping
+namespace ShoppingService
 {
-    public class DeliveredStatus : OrderStatus
+    public class ValidateStatus : OrderStatus
     {
 
         private List<Item> items;
 
-        public DeliveredStatus(List<Item> items)
+        public ValidateStatus(List<Item> items)
         {
             this.items = items;
         }
@@ -21,7 +21,7 @@ namespace Shopping
 
         public void RemoveItem(Item item)
         {
-            throw new NotSupportedException();
+            items.Remove(item);
         }
     }
 }

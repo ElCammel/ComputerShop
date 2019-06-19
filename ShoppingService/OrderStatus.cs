@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shopping
+namespace ShoppingService
 {
     public interface OrderStatus
     {
