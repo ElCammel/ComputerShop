@@ -5,11 +5,13 @@ namespace ShoppingService
 {
     public class Order
     {
-        private List<Option> options = new List<Option>();
+        public Accounting.Address shippingAddress { get; set; }
+        public PaymentService.IPayment paymentMetthod { get; set; }
 
-        internal void AddNewOption(Option option)
+
+        public void PlaceOrder()
         {
-            this.options.Add(option);
+
         }
     }
 }

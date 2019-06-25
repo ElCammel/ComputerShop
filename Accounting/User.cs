@@ -3,36 +3,35 @@ using System.Collections.Generic;
 
 namespace Accounting
 {
-    public class Client
+    public class User
     {
-        public List<Address> addresses { get; set; }
+        public Address shippingAddress { get; set; }
+        public Address billingAddress { get; set; }
         public string name { get; set; }
         public string lastName { get; set; }
         public string email { get; set; }
         public int phoneNumber { get; set; }
         public List<CreditCard> cards { get; set; }
 
-        public Client(Address address, string name, string lastName, string email)
+        public User(Address shippingAddress, Address billingAddress, string name, string lastName, string email)
         {
-            this.addresses.Add(address);
+            this.shippingAddress = shippingAddress;
+            this.billingAddress = billingAddress;
             this.name = name;
             this.lastName = lastName;
             this.email = email;
+            
         }
 
-        public Client(Address address, string name, string lastName, int phoneNumber)
+        public User(Address shippingAddress, Address billingAddress, string name, string lastName, int phoneNumber)
         {
-            this.addresses.Add(address);
+            this.shippingAddress = shippingAddress;
+            this.billingAddress = billingAddress;
             this.name = name;
             this.lastName = lastName;
             this.phoneNumber = phoneNumber;
         }
-
-        public void AddAdress(Address address)
-        {
-            this.addresses.Add(address);
-        }
-
+        
         public bool AddCard(CreditCard card)
         {
             if (card.IsValidCardInfos())
