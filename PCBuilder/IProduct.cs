@@ -7,6 +7,7 @@ namespace PcBuilder
 {
     public interface IProduct
     {
+        int likeNumber { get; set; }
         int GetPrice();
     }
 }

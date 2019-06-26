@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using PcBuilder;
 
-namespace LikeCounter.Application
+namespace ProductLiker
 {
     public interface ILikeCounter
     {
-        void Update(int likesNumber);
+        void Update(IProduct product);
     }
 }

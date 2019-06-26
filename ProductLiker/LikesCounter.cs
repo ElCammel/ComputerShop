@@ -1,19 +1,21 @@
-﻿using LikeCounter.Application;
+﻿
+using PcBuilder;
 using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace LikeCounter
+namespace ProductLiker
 {
     public class LikesCounter : ILikeCounter
     {
-
         public LikesCounter(ProductAnalysis product)
         {
-            product.Add(this);
+            product.SetLikeCounter(this);
         }
 
-        public void Update(int likesNumber)
+        public void Update(IProduct product)
         {
-            Console.WriteLine(likesNumber);
+            Console.WriteLine(product.likeNumber);
         }
     }
 }

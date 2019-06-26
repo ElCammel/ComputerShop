@@ -1,27 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using PcBuilder;
 
-
-namespace LikeCounter
+namespace ProductLiker
 {
     public class ProductAnalysis
     {
         private int likesNumber = 0;
-        public List<Application.ILikeCounter> counters = new List<Application.ILikeCounter>();
+        private ILikeCounter counter;
 
-        public void LikeProduct()
+        public void LikeProduct(IProduct product)
         {
-            likesNumber++;
-            foreach(var counter in this.counters)
-            {
-                counter.Update(likesNumber);
-            }
+            product.likeNumber ++;
+            counter.Update(product);
         }
 
-        public void Add(Application.ILikeCounter counter)
+        public void SetLikeCounter(ILikeCounter counter)
         {
-            counters.Add(counter);
+            this.counter = counter;
         }
 
         public int GetLikesNumber()
