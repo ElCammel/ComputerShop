@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PcBuilder
 {
-    public class Pc : IPc
+    public class Pc : IProduct
     {
         private int price;
         private List<IOption> options;
