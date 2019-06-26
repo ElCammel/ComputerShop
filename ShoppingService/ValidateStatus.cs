@@ -7,21 +7,21 @@ namespace ShoppingService
     public class ValidateStatus : OrderStatus
     {
 
-        private List<Item> items;
+        private List<PcBuilder.IProduct> products;
 
-        public ValidateStatus(List<Item> items)
+        public ValidateStatus(List<PcBuilder.IProduct> products)
         {
-            this.items = items;
+            this.products = products;
         }
 
-        public void AddItem(Item item)
+        public void AddProduct(PcBuilder.IProduct product)
         {
             throw new NotSupportedException();
         }
 
-        public void RemoveItem(Item item)
+        public void RemoveProduct(PcBuilder.IProduct product)
         {
-            items.Remove(item);
+            products.Remove(product);
         }
     }
 }

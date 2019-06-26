@@ -6,7 +6,7 @@ namespace ShoppingService
 {
     public interface OrderStatus
     {
-        void AddItem(Item item);
-        void RemoveItem(Item item);
+        void AddProduct(PcBuilder.IProduct product);
+        void RemoveProduct(PcBuilder.IProduct product);
     }
 }

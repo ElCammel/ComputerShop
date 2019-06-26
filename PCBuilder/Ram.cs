@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PcBuilder
 {
-    class Ram : IOption
+    public class Ram : IOption
     {
         public int price { get; set; }
         public string name { get; set; }

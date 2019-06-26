@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PcBuilder
 {
-    class VideoCard : IOption
+    public class VideoCard : IOption
     {
         public int price { get; set; }
         public string name { get; set; }

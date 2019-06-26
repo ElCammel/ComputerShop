@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using PcBuilder;
 
 namespace PcBuilder
 {
-    public interface IPc
+    public interface IProduct
     {
-        List<IOption> GetOptions();
         int GetPrice();
     }
 }

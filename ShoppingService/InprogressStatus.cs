@@ -7,19 +7,19 @@ namespace ShoppingService
     public class InprogressStatus : OrderStatus
     {
 
-        private List<Item> items;
+        private List<PcBuilder.IProduct> items;
 
-        public InprogressStatus(List<Item> items)
+        public InprogressStatus(List<PcBuilder.IProduct> items)
         {
             this.items = items;
         }
 
-        public void AddItem(Item item)
+        public void AddProduct(PcBuilder.IProduct item)
         {
             items.Add(item);
         }
 
-        public void RemoveItem(Item item)
+        public void RemoveProduct(PcBuilder.IProduct item)
         {
             items.Remove(item);
         }

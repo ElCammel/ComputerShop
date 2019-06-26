@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PcBuilder
 {
-    class Mouse : IOption
+    public class Mouse : IOption
     {
         public int price { get; set; }
         public string name { get; set; }

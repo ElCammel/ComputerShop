@@ -8,7 +8,7 @@ namespace ShoppingService
         public Accounting.Address shippingAddress { get; set; }
         public PaymentService.IPayment paymentMetthod { get; set; }
         private OrderStatus state;
-        public List<IProduct> Items { get; }
+        public List<PcBuilder.IProduct> products { get; }
 
         public void PlaceOrder()
         {
@@ -18,17 +18,17 @@ namespace ShoppingService
         public Order(OrderStatus state)
         {
             this.state = state;
-            Items = new List<IProduct>();
+            products = new List<PcBuilder.IProduct>();
         }
 
-        public void AddItem(IProduct item)
+        public void AddProduct(PcBuilder.IProduct product)
         {
-            state.AddItem(item);
+            state.AddProduct(product);
         }
 
-        public void RemoveItem(IProduct item)
+        public void RemoveProduct(PcBuilder.IProduct product)
         {
-            state.RemoveItem(item);
+            state.RemoveProduct(product);
         }
 
         public void NextStatus(OrderStatus state)

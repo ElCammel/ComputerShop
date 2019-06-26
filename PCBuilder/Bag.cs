@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PcBuilder
 {
-    class Bag : IOption
+    public class Bag : IOption
     {
         public int price { get; set; }
         public string name { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PcBuilder
 {
-    class ScreenSize : IOption
+    public class ScreenSize : IOption
     {
         public int price { get; set; }
         public string name { get; set; }

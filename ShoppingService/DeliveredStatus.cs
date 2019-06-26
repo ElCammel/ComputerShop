@@ -7,19 +7,19 @@ namespace ShoppingService
     public class DeliveredStatus : OrderStatus
     {
 
-        private List<Item> items;
+        private List<PcBuilder.IProduct> products;
 
-        public DeliveredStatus(List<Item> items)
+        public DeliveredStatus(List<PcBuilder.IProduct> products)
         {
-            this.items = items;
+            this.products = products;
         }
 
-        public void AddItem(Item item)
+        public void AddProduct(PcBuilder.IProduct product)
         {
             throw new NotSupportedException();
         }
 
-        public void RemoveItem(Item item)
+        public void RemoveProduct(PcBuilder.IProduct product)
         {
             throw new NotSupportedException();
         }
