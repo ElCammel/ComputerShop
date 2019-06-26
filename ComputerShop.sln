@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29009.5
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComputerShop", "ComputerShop\ComputerShop.csproj", "{981FE23F-5223-4048-B3FA-52851F8551BF}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentService", "PaymentService\PaymentService.csproj", "{F36D7EE6-A72F-4E2C-BE7D-1D909A24CEB2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Accounting", "Accounting\Accounting.csproj", "{807A551C-A720-4F4A-A702-8CF998898871}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingService", "ShoppingService\ShoppingService.csproj", "{F448B56E-EAA4-41F3-AB2F-E81E9A658E4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCBuilder", "PCBuilder\PCBuilder.csproj", "{26D68948-9B50-4079-B096-7BF8523D6939}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PcBuilder", "PCBuilder\PcBuilder.csproj", "{26D68948-9B50-4079-B096-7BF8523D6939}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLiker", "ProductLiker\ProductLiker.csproj", "{7BA1D7A6-02AC-4458-B3A9-16CA9BCC4758}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{981FE23F-5223-4048-B3FA-52851F8551BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{981FE23F-5223-4048-B3FA-52851F8551BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{981FE23F-5223-4048-B3FA-52851F8551BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{981FE23F-5223-4048-B3FA-52851F8551BF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F36D7EE6-A72F-4E2C-BE7D-1D909A24CEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F36D7EE6-A72F-4E2C-BE7D-1D909A24CEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F36D7EE6-A72F-4E2C-BE7D-1D909A24CEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{26D68948-9B50-4079-B096-7BF8523D6939}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26D68948-9B50-4079-B096-7BF8523D6939}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26D68948-9B50-4079-B096-7BF8523D6939}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BA1D7A6-02AC-4458-B3A9-16CA9BCC4758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BA1D7A6-02AC-4458-B3A9-16CA9BCC4758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BA1D7A6-02AC-4458-B3A9-16CA9BCC4758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BA1D7A6-02AC-4458-B3A9-16CA9BCC4758}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
