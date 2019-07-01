@@ -10,7 +10,7 @@ namespace ShoppingService
 
         public List<IProduct> products { get; }
 
-        public ValidateStatus(object items)
+        public ValidateStatus()
         {
             this.products = new List<IProduct>();
         }

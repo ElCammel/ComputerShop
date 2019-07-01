@@ -13,37 +13,38 @@ namespace UnitTestProjectForComputerShop
         public void Should_add_item_into_an_in_progress_order()
         {
 
-            OrderStatus orderStatus = new InprogressStatus();
-            
+            OrderStatus orderStatus = new InprogressStatus(new List<IProduct>());
+            var order = new Order(orderStatus);
             var product = new Ram(300, "16 Go");
-            orderStatus.AddProduct(product);
+            order.AddProduct(product);
 
-            Assert.IsTrue(orderStatus.products.Contains(product));
+
+            Assert.IsTrue(order.products.Contains(product));
         }
-        
+        /*
         [TestMethod]
         [ExpectedException(typeof(NotSupportedException))]
         public void Should_throw_notSuportedException_when_adding_an_item_into_a_validated_order()
         {
-            OrderStatus orderStatus = new InprogressStatus();
+            OrderStatus orderStatus = new InprogressStatus(new List<Item>());
             var order = new Order(orderStatus);
-            order.NextStatus(new ValidateStatus(orderStatus.products));
-            var item = new CPU(150,"cpu de la mort qui tue");
-            order.AddProduct(item);
+            order.NextStatus(new ValidateStatus(order.Items));
+            var item = new Item();
+            order.AddItem(item);
         }
-        
+
         [TestMethod]
         [ExpectedException(typeof(NotSupportedException))]
         public void Should_throw_notSupportedException_when_adding_an_item_into_a_delivered_order()
         {
-            OrderStatus orderStatus = new InprogressStatus();
+            OrderStatus orderStatus = new InprogressStatus(new List<Item>());
             var order = new Order(orderStatus);
             order.NextStatus(new ValidateStatus(order.Items));
             order.NextStatus(new DeliveredStatus(order.Items));
             var item = new Item();
             order.AddItem(item);
         }
-        /*
+
         [TestMethod]
         public void Should_remove_item_from_the_order_when_it_is_in_progress()
         {

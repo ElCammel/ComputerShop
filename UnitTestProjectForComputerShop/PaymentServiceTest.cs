@@ -9,7 +9,7 @@ namespace UnitTestProjectForComputerShop
 {
     [TestClass]
     public class PaymentServiceTest
-    {/*
+    {
         [TestMethod]
         public void shouldCalculateCashPrice()
         {
@@ -24,6 +24,8 @@ namespace UnitTestProjectForComputerShop
         }
 
         [TestMethod]
+        public void shouldCalculateLuxembourgCreditPrice()
+        {
         public void shouldCalculateCreditPrice()
         {
             Order order = new Order(new ValidateStatus());
@@ -33,6 +35,6 @@ namespace UnitTestProjectForComputerShop
             int result = checkoutProcess.GetOrderPaimentMethodPrice();
 
             Assert.AreEqual(result, 5);
-        }*/
+        }
     }
 }
