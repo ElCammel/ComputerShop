@@ -6,7 +6,7 @@ using PcBuilder;
 
 namespace PcBuilder
 {
-    public interface IOption
+    public interface IOption :IProduct
     {
         int price { get; set; }
 
