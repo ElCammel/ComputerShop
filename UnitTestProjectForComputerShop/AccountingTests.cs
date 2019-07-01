@@ -102,7 +102,7 @@ namespace UnitTestProjectForComputerShop
             user.cards.Add(creditCard);
 
             var card = user.cards[0];
-
+            Console.Write(card.cvvCode);
             Assert.IsTrue(card.IsValidCardInfos());
         }
     }

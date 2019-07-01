@@ -20,6 +20,7 @@ namespace Accounting
             this.name = name;
             this.lastName = lastName;
             this.email = email;
+            cards = new List<CreditCard>();
             
         }
 
