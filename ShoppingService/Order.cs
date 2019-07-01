@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using Accounting;
+using PaymentService;
+using PcBuilder;
 
 namespace ShoppingService
 {
     public class Order
     {
-        public Accounting.Address shippingAddress { get; set; }
-        public PaymentService.IPayment paymentMetthod { get; set; }
+        public Address shippingAddress { get; set; }
+        public IPayment paymentMetthod { get; set; }
         private OrderStatus state;
-        public List<PcBuilder.IProduct> products { get; }
+        public List<IProduct> products { get; }
 
         public void PlaceOrder()
         {
@@ -18,15 +21,15 @@ namespace ShoppingService
         public Order(OrderStatus state)
         {
             this.state = state;
-            products = new List<PcBuilder.IProduct>();
+            products = new List<IProduct>();
         }
 
-        public void AddProduct(PcBuilder.IProduct product)
+        public void AddProduct(IProduct product)
         {
             state.AddProduct(product);
         }
 
-        public void RemoveProduct(PcBuilder.IProduct product)
+        public void RemoveProduct(IProduct product)
         {
             state.RemoveProduct(product);
         }

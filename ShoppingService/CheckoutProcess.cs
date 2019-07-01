@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using PaymentService;
+using Accounting;
 
 namespace ShoppingService
 {
@@ -8,7 +10,7 @@ namespace ShoppingService
     {
         public Order order { get; set; }
 
-       public CheckoutProcess(Order order, Accounting.Address shippingAddress, PaymentService.IPayment paymentMetthod)
+       public CheckoutProcess(Order order, Address shippingAddress, IPayment paymentMetthod)
         {
             this.order = order;
             order.shippingAddress = shippingAddress;
@@ -22,12 +24,12 @@ namespace ShoppingService
 
         }
 
-        public void SetShipmentAddress(Accounting.Address shippingAddress)
+        public void SetShipmentAddress(Address shippingAddress)
         {
             order.shippingAddress = shippingAddress;
         }
 
-        public void SetPaymentMethod(PaymentService.IPayment paymentMethod)
+        public void SetPaymentMethod(IPayment paymentMethod)
         {
             order.paymentMetthod = paymentMethod;
         }

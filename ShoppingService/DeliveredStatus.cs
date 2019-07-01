@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using PcBuilder;
 
 namespace ShoppingService
 {
     public class DeliveredStatus : OrderStatus
     {
 
-        private List<PcBuilder.IProduct> products;
+        private List<IProduct> products;
 
-        public DeliveredStatus(List<PcBuilder.IProduct> products)
+        public DeliveredStatus(List<IProduct> products)
         {
             this.products = products;
         }
 
-        public void AddProduct(PcBuilder.IProduct product)
+        public void AddProduct(IProduct product)
         {
             throw new NotSupportedException();
         }
 
-        public void RemoveProduct(PcBuilder.IProduct product)
+        public void RemoveProduct(IProduct product)
         {
             throw new NotSupportedException();
         }
