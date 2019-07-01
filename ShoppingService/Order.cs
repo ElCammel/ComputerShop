@@ -23,6 +23,7 @@ namespace ShoppingService
         {
             this.state = state;
             products = new List<IProduct>();
+            price = 0;
         }
 
         public void AddProduct(IProduct product)
@@ -44,14 +45,11 @@ namespace ShoppingService
 
         public int CalculatePrice()
         {
-            var totalPrice = 0;
-
             foreach (IProduct product in state.products)
             {
-                totalPrice += product.GetPrice();
+                this.price += product.GetPrice();
             }
-
-            this.price = totalPrice;
+           
 
             return price;
         }
