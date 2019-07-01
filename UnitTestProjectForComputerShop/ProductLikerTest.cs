@@ -17,7 +17,7 @@ namespace UnitTestProjectForComputerShop
             LikesCounter counter = new LikesCounter(liker);
             IProduct ram = new Ram(25, "Corsair");
 
-            liker.LikeProduct();
+            //liker.LikeProduct();
 
             int numberLikes = liker.GetLikesNumber();
             Assert.AreEqual(1, numberLikes);
@@ -28,8 +28,8 @@ namespace UnitTestProjectForComputerShop
         {
             ProductAnalysis liker = new ProductAnalysis();
             LikesCounter counter = new LikesCounter(liker);
-            liker.LikeProduct();
-            liker.LikeProduct();
+           // liker.LikeProduct();
+            //liker.LikeProduct();
             int numberLikes = liker.GetLikesNumber();
             Assert.AreEqual(2, numberLikes);
         }
@@ -38,7 +38,7 @@ namespace UnitTestProjectForComputerShop
         public void Should_return_likes_number_when_calling_product_liker()
         {
             ProductAnalysis liker = new ProductAnalysis();
-            liker.LikeProduct();
+            //liker.LikeProduct();
             LikesCounter counter = new LikesCounter(liker);
             int likeNumber = liker.GetLikesNumber();
             Assert.AreEqual(1, likeNumber);

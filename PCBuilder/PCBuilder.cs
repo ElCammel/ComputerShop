@@ -14,6 +14,7 @@ namespace PcBuilder
         public PcBuilder(Pc pc)
         {
             this.pc = pc;
+            this.price = pc.GetPrice();
         }
 
         public IPcBuilder addOption(IOption option)
