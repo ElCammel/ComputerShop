@@ -10,6 +10,7 @@ namespace PcBuilder
     {
         public int price { get; set; }
         public string name { get; set; }
+        public int likeNumber { get; set; }
         public Mouse(int price, string name)
         {
             this.price = price;

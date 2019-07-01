@@ -8,7 +8,7 @@ namespace PcBuilder
     {
         private int price;
         private List<IOption> options;
-
+        public int likeNumber { get; set; }
         public Pc(int price)
         {
             this.price = price;

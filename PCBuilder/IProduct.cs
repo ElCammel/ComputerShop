@@ -9,7 +9,6 @@ namespace PcBuilder
     {
         int likeNumber { get; set; }
         
-        IOption Option { get; set; }
         int GetPrice();
     }
 }
