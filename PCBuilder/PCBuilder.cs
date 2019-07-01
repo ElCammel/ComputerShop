@@ -56,7 +56,7 @@ namespace PcBuilder
             return this;
         }
 
-        public IPc GetPc()
+        public IProduct GetPc()
         {
             return new Pc(options);
         }

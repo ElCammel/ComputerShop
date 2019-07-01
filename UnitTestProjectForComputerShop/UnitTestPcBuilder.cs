@@ -33,9 +33,9 @@ namespace UnitTestProjectForComputerShop
 
             PcBuilder.PcBuilder pcBuilder = new PcBuilder.PcBuilder();
             pcBuilder.addKeyboard().addRam().addProcessor();
-
-
-
+            pcBuilder.GetPc();
+            pcBuilder.GetPrice();
+            Assert.AreEqual(0, pcBuilder.GetPrice());
             // je ne vois pas comment test là
         }
     }

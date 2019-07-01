@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentService", "PaymentService\PaymentService.csproj", "{F36D7EE6-A72F-4E2C-BE7D-1D909A24CEB2}"
 EndProject
@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingService", "Shopping
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PcBuilder", "PCBuilder\PcBuilder.csproj", "{26D68948-9B50-4079-B096-7BF8523D6939}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLiker", "ProductLiker\ProductLiker.csproj", "{7BA1D7A6-02AC-4458-B3A9-16CA9BCC4758}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductLiker", "ProductLiker\ProductLiker.csproj", "{7BA1D7A6-02AC-4458-B3A9-16CA9BCC4758}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProjectForComputerShop", "UnitTestProjectForComputerShop\UnitTestProjectForComputerShop.csproj", "{54BF50EC-43B0-4487-AB35-BB6CE468D9A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{7BA1D7A6-02AC-4458-B3A9-16CA9BCC4758}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BA1D7A6-02AC-4458-B3A9-16CA9BCC4758}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BA1D7A6-02AC-4458-B3A9-16CA9BCC4758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54BF50EC-43B0-4487-AB35-BB6CE468D9A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54BF50EC-43B0-4487-AB35-BB6CE468D9A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54BF50EC-43B0-4487-AB35-BB6CE468D9A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54BF50EC-43B0-4487-AB35-BB6CE468D9A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

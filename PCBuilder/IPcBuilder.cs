@@ -16,7 +16,7 @@ namespace PcBuilder
         IPcBuilder addMouse();
         IPcBuilder addBag();
         IPcBuilder addKeyboard();
-        IPc GetPc();
+        IProduct GetPc();
         int GetPrice();
         int CalculatePrice();
     }
