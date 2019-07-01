@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using PaymentService;
 using ShoppingService;
+using PcBuilder;
 
 namespace UnitTestProjectForComputerShop
 {
@@ -9,11 +10,14 @@ namespace UnitTestProjectForComputerShop
     public class PaymentServiceTest
     {
         [TestMethod]
-        public void shouldCalculateLuxembourgCashPrice()
+        public void shouldCashPrice()
         {
             IPayment cashPayment = new CashPayment();
-            Order order = new Order(cashPayment, 1, 2);
-            double result = order.calculatePrice();
+            Order order = new Order();
+            order.AddProduct(new Ram(25, "corsair"));
+            ValidateStatus validateStatus = new ValidateStatus(order.products);
+            CheckoutProcess checkoutProcess = new CheckoutProcess(order);
+            double result = order.price;
 
             Assert.AreEqual(result, 3.42);
         }

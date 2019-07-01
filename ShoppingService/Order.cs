@@ -19,6 +19,11 @@ namespace ShoppingService
             return true;
         }
 
+        public Order()
+        {
+
+        }
+
         public Order(OrderStatus state)
         {
             this.state = state;
