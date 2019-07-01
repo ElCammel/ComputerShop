@@ -8,21 +8,21 @@ namespace ShoppingService
     public class InprogressStatus : OrderStatus
     {
 
-        private List<IProduct> items;
+        public List<IProduct> products { get; }
 
-        public InprogressStatus(List<IProduct> items)
+        public InprogressStatus()
         {
-            this.items = items;
+            this.products = new List<IProduct>();
         }
 
-        public void AddProduct(IProduct item)
+        public void AddProduct(IProduct product)
         {
-            items.Add(item);
+            products.Add(product);
         }
 
-        public void RemoveProduct(IProduct item)
+        public void RemoveProduct(IProduct product)
         {
-            items.Remove(item);
+            products.Remove(product);
         }
 
     }

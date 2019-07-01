@@ -10,7 +10,7 @@ namespace ShoppingService
     {
         public Address shippingAddress { get; set; }
         public IPayment paymentMethod { get; set; }
-        private OrderStatus state;
+        public OrderStatus state { get; set; }
         public List<IProduct> products { get; }
         public int price { get; set; }
 
@@ -19,15 +19,11 @@ namespace ShoppingService
             return true;
         }
 
-        public Order()
-        {
-
-        }
-
         public Order(OrderStatus state)
         {
             this.state = state;
             products = new List<IProduct>();
+            price = 0;
         }
 
         public void AddProduct(IProduct product)
@@ -49,13 +45,11 @@ namespace ShoppingService
 
         public int CalculatePrice()
         {
-            var totalPrice = 0;
-            foreach (IProduct product in products)
+            foreach (IProduct product in state.products)
             {
-                totalPrice += product.GetPrice();
+                this.price += product.GetPrice();
             }
-
-            this.price = totalPrice;
+           
 
             return price;
         }
