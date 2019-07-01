@@ -14,64 +14,64 @@ namespace UnitTestProjectForComputerShop
         {
 
             OrderStatus orderStatus = new InprogressStatus();
-            var order = new Order(orderStatus);
             var product = new Ram(300, "16 Go");
-            order.AddProduct(product);
+            orderStatus.AddProduct(product);
 
 
-            Assert.IsTrue(order.products.Contains(product));
+            Assert.IsTrue(orderStatus.products.Contains(product));
         }
-        /*
+        
         [TestMethod]
         [ExpectedException(typeof(NotSupportedException))]
         public void Should_throw_notSuportedException_when_adding_an_item_into_a_validated_order()
         {
-            OrderStatus orderStatus = new InprogressStatus(new List<Item>());
+            OrderStatus orderStatus = new InprogressStatus();
             var order = new Order(orderStatus);
-            order.NextStatus(new ValidateStatus(order.Items));
-            var item = new Item();
-            order.AddItem(item);
+            order.NextStatus(new ValidateStatus());
+            var product = new Ram(300, "16 Go");
+            orderStatus.AddProduct(product);
         }
-
+        
         [TestMethod]
         [ExpectedException(typeof(NotSupportedException))]
         public void Should_throw_notSupportedException_when_adding_an_item_into_a_delivered_order()
         {
-            OrderStatus orderStatus = new InprogressStatus(new List<Item>());
+            
+            OrderStatus orderStatus = new InprogressStatus();
             var order = new Order(orderStatus);
-            order.NextStatus(new ValidateStatus(order.Items));
-            order.NextStatus(new DeliveredStatus(order.Items));
-            var item = new Item();
-            order.AddItem(item);
+            order.NextStatus(new ValidateStatus());
+            order.NextStatus(new DeliveredStatus());
+            var product = new Ram(300, "16 Go");
+            order.AddProduct(product);
         }
 
         [TestMethod]
         public void Should_remove_item_from_the_order_when_it_is_in_progress()
         {
-            OrderStatus orderStatus = new InprogressStatus(new List<Item>());
+            OrderStatus orderStatus = new InprogressStatus();
             var order = new Order(orderStatus);
-            var item = new Item();
-            order.AddItem(item);
+            var product = new Ram(300, "16 Go");
+            order.AddProduct(product);
 
-            order.RemoveItem(item);
+            order.RemoveProduct(product);
 
-            Assert.IsFalse(order.Items.Contains(item));
+            Assert.IsFalse(order.products.Contains(product));
         }
-
+        
         [TestMethod]
         public void Should_remove_item_from_the_order_when_it_is_validated()
         {
-            OrderStatus orderStatus = new InprogressStatus(new List<Item>());
+            OrderStatus orderStatus = new InprogressStatus();
             var order = new Order(orderStatus);
-            var item = new Item();
-            order.AddItem(item);
-            order.NextStatus(new ValidateStatus(order.Items));
+            var product = new Ram(300, "16 Go");
+            order.AddProduct(product);
+            order.NextStatus(new ValidateStatus());
 
-            order.RemoveItem(item);
+            order.RemoveProduct(product);
 
-            Assert.IsFalse(order.Items.Contains(item));
+            Assert.IsFalse(order.products.Contains(product));
         }
-
+        /*
         [TestMethod]
         [ExpectedException(typeof(NotSupportedException))]
         public void Should_throw_notSupportedException_when_remove_an_item_from_a_delivered_order()
