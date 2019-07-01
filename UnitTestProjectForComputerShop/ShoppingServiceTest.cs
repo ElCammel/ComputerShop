@@ -71,17 +71,17 @@ namespace UnitTestProjectForComputerShop
 
             Assert.IsFalse(order.products.Contains(product));
         }
-        /*
+        
         [TestMethod]
         [ExpectedException(typeof(NotSupportedException))]
         public void Should_throw_notSupportedException_when_remove_an_item_from_a_delivered_order()
         {
-            OrderStatus orderStatus = new InprogressStatus(new List<Item>());
+            OrderStatus orderStatus = new InprogressStatus();
             var order = new Order(orderStatus);
-            order.NextStatus(new ValidateStatus(order.Items));
-            order.NextStatus(new DeliveredStatus(order.Items));
-            var item = new Item();
-            order.RemoveItem(item);
-        }*/
+            order.NextStatus(new ValidateStatus());
+            order.NextStatus(new DeliveredStatus());
+            var product = new Ram(300, "16 Go");
+            order.RemoveProduct(product);
+        }
     }
 }
