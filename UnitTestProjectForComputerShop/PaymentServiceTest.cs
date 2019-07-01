@@ -24,8 +24,6 @@ namespace UnitTestProjectForComputerShop
         }
 
         [TestMethod]
-        public void shouldCalculateLuxembourgCreditPrice()
-        {
         public void shouldCalculateCreditPrice()
         {
             Order order = new Order(new ValidateStatus());

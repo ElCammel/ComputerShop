@@ -13,7 +13,7 @@ namespace UnitTestProjectForComputerShop
         public void Should_add_item_into_an_in_progress_order()
         {
 
-            OrderStatus orderStatus = new InprogressStatus(new List<IProduct>());
+            OrderStatus orderStatus = new InprogressStatus();
             var order = new Order(orderStatus);
             var product = new Ram(300, "16 Go");
             order.AddProduct(product);
