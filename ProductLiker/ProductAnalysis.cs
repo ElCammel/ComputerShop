@@ -7,7 +7,6 @@ namespace ProductLiker
 {
     public class ProductAnalysis
     {
-        private int likesNumber = 0;
         private ILikeCounter counter;
 
         public void LikeProduct(IProduct product)
@@ -19,11 +18,6 @@ namespace ProductLiker
         public void SetLikeCounter(ILikeCounter counter)
         {
             this.counter = counter;
-        }
-
-        public int GetLikesNumber()
-        {
-            return likesNumber;
         }
     }
 }

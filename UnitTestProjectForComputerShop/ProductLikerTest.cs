@@ -8,7 +8,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestProjectForComputerShop
 {
-    class ProductLikerTest
+    [TestClass]
+    public class ProductLikerTest
     {
         [TestMethod]
         public void Should_return_one_like_when_only_one_like_added()
@@ -19,8 +20,7 @@ namespace UnitTestProjectForComputerShop
 
             liker.LikeProduct(ram);
 
-            int numberLikes = liker.GetLikesNumber();
-            Assert.AreEqual(1, numberLikes);
+            Assert.AreEqual(1, ram.likeNumber);
         }
 
         [TestMethod]
@@ -32,20 +32,10 @@ namespace UnitTestProjectForComputerShop
 
             liker.LikeProduct(ram);
             liker.LikeProduct(ram);
-            int numberLikes = liker.GetLikesNumber();
-            Assert.AreEqual(2, numberLikes);
-        }
 
-        [TestMethod]
-        public void Should_return_likes_number_when_calling_product_liker()
-        {
-            ProductAnalysis liker = new ProductAnalysis();
-            IProduct ram = new Ram(25, "Corsair");
-            liker.LikeProduct(ram);
-            LikesCounter counter = new LikesCounter(liker);
-            int likeNumber = liker.GetLikesNumber();
-            Assert.AreEqual(1, likeNumber);
+            Assert.AreEqual(2, ram.likeNumber);
         }
+        
         
     }
 }
