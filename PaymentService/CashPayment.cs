@@ -6,7 +6,7 @@ namespace PaymentService
 {
     public class CashPayment : IPayment
     {
-        public double calculatePrice(double price)
+        public int calculatePrice(int price)
         {
             return price;
         }

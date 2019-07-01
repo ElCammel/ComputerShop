@@ -9,13 +9,14 @@ namespace ShoppingService
     public class Order
     {
         public Address shippingAddress { get; set; }
-        public IPayment paymentMetthod { get; set; }
+        public IPayment paymentMethod { get; set; }
         private OrderStatus state;
         public List<IProduct> products { get; }
+        public int price { get; set; }
 
-        public void PlaceOrder()
+        public bool PlaceOrder()
         {
-
+            return true;
         }
 
         public Order(OrderStatus state)
@@ -27,16 +28,38 @@ namespace ShoppingService
         public void AddProduct(IProduct product)
         {
             state.AddProduct(product);
+            CalculatePrice();
         }
 
         public void RemoveProduct(IProduct product)
         {
             state.RemoveProduct(product);
+            CalculatePrice();
         }
 
         public void NextStatus(OrderStatus state)
         {
             this.state = state;
         }
+
+        public int CalculatePrice()
+        {
+            var totalPrice = 0;
+            foreach (IProduct product in products)
+            {
+                totalPrice += product.GetPrice();
+            }
+
+            this.price = totalPrice;
+
+            return price;
+        }
+
+
+        public int calculatePaymentPrice()
+        {
+            return paymentMethod.calculatePrice(this.price);
+        }
+        
     }
 }

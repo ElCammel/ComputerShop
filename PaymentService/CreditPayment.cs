@@ -13,7 +13,7 @@ namespace PaymentService
             this.numberOfPayments = numberOfPayments;
         }
 
-        public double calculatePrice(double price)
+        public int calculatePrice(int price)
         {
             return price / numberOfPayments;
         }

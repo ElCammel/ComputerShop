@@ -10,11 +10,12 @@ namespace ShoppingService
     {
         public Order order { get; set; }
 
-       public CheckoutProcess(Order order, Address shippingAddress, IPayment paymentMetthod)
+       public CheckoutProcess(Order order, Address shippingAddress, IPayment paymentMethod)
         {
             this.order = order;
             order.shippingAddress = shippingAddress;
-            order.paymentMetthod = paymentMetthod;
+            order.paymentMethod = paymentMethod;
+
             order.PlaceOrder();
         }
 
@@ -31,7 +32,7 @@ namespace ShoppingService
 
         public void SetPaymentMethod(IPayment paymentMethod)
         {
-            order.paymentMetthod = paymentMethod;
+            order.paymentMethod = paymentMethod;
         }
 
         public void PlaceOrder()

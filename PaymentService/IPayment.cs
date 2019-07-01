@@ -6,6 +6,6 @@ namespace PaymentService
 {
     public interface IPayment
     {
-        double calculatePrice(double price);
+        int calculatePrice(int price);
     }
 }
