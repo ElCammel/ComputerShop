@@ -13,8 +13,7 @@ namespace UnitTestProjectForComputerShop
         [TestMethod]
         public void shouldCalculateCashPrice()
         {
-            IPayment cashPayment = new CashPayment();
-            Order order = new Order(new ValidateStatus());
+            Order order = new Order(new InprogressStatus());
             order.AddProduct(new Ram(25, "corsair"));
 
             CheckoutProcess checkoutProcess = new CheckoutProcess(order, new Address("12 avenue de paris", "Chatillon", 92320), new CashPayment());
@@ -26,7 +25,7 @@ namespace UnitTestProjectForComputerShop
         [TestMethod]
         public void shouldCalculateCreditPrice()
         {
-            Order order = new Order(new ValidateStatus());
+            Order order = new Order(new InprogressStatus());
             order.AddProduct(new Ram(15, "corsair"));
 
             CheckoutProcess checkoutProcess = new CheckoutProcess(order, new Address("12 avenue de paris", "Chatillon", 92320), new CreditPayment(3));
