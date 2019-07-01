@@ -9,20 +9,13 @@ namespace UnitTestProjectForComputerShop
         [TestMethod]
         public void ConstructionPcForPcBuilderWithCpuRamKeyboard()
         {
-            PcBuilder.Keyboard keyboard = new PcBuilder.Keyboard();
-            keyboard.name = "Keyboard VIVER 7";
-            keyboard.price = 80;
+            PcBuilder.Keyboard keyboard = new PcBuilder.Keyboard(80, "Keyboard VIVER 7");
 
-            PcBuilder.CPU cpu = new PcBuilder.CPU();
-            cpu.name = "Spiritus x64 6985 coeurs";
-            cpu.price = 350;
+            PcBuilder.CPU cpu = new PcBuilder.CPU(350, "Spiritus x64 6985 coeurs");
 
             PcBuilder.Pc newpc = new PcBuilder.Pc(300);
 
-            PcBuilder.Ram ram = new PcBuilder.Ram();
-            ram.name = "RAM Corsair 32 Go";
-            ram.price = 200;
-            
+            PcBuilder.Ram ram = new PcBuilder.Ram(200, "RAM Corsair 32 Go");
 
             List<PcBuilder.IOption> list = new List<PcBuilder.IOption>();
             list.Add(keyboard);

@@ -11,7 +11,6 @@ namespace PcBuilder
     {
         public int price { get; set; }
         public string name { get; set; }
-
         public CPU(int price, string name)
         {
             this.price = price;

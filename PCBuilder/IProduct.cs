@@ -8,6 +8,8 @@ namespace PcBuilder
     public interface IProduct
     {
         int likeNumber { get; set; }
+        
+        IOption Option { get; set; }
         int GetPrice();
     }
 }
