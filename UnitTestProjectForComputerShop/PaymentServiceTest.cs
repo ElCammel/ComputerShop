@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace UnitTestProjectForComputerShop
 {
     [TestClass]
-    public class UnitTestShoppingService
+    public class PaymentServiceTest
     {
         [TestMethod]
         public void ConstructionPcForPcBuilderWithCpuRamKeyboard()

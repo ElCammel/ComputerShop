@@ -49,18 +49,9 @@ namespace UnitTestProjectForComputerShop
         }
 
         [TestMethod]
-        public void creditCardDateShouldNotHaveValidInformations()
-        {
-            CreditCard creditCard = new CreditCard("1234567894561245", "785", "10/21");
-            var result = creditCard.IsValidCardInfos();
-
-            Assert.IsFalse(result);
-        }
-
-        [TestMethod]
         public void creditCardDateShouldNotHaveValidCCV()
         {
-            CreditCard creditCard = new CreditCard("123456789", "78", "10/21");
+            CreditCard creditCard = new CreditCard("1234567894561245", "78", "10/21");
             var result = creditCard.IsValidSecurityCode();
 
             Assert.IsFalse(result);
@@ -74,6 +65,24 @@ namespace UnitTestProjectForComputerShop
 
             Assert.IsFalse(result);
 
+        }
+
+        [TestMethod]
+        public void creditCardDateShouldNotHaveValidNumber()
+        {
+            CreditCard creditCard = new CreditCard("123", "785", "10/21");
+            var result = creditCard.IsValidCardNumber();
+
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void creditCardDateShouldNotHaveValidInformations()
+        {
+            CreditCard creditCard = new CreditCard("123", "75", "10/17");
+            var result = creditCard.IsValidCardInfos();
+
+            Assert.IsFalse(result);
         }
 
     }
