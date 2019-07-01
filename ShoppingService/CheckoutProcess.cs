@@ -40,5 +40,10 @@ namespace ShoppingService
             order.PlaceOrder();
         }
 
+        public int GetOrderPaimentMethodPrice()
+        {
+            return order.calculatePaymentPrice();
+        }
+
     }
 }

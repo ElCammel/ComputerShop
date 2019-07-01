@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using PaymentService;
 using ShoppingService;
 using PcBuilder;
+using Accounting;
 
 namespace UnitTestProjectForComputerShop
 {
@@ -16,7 +17,7 @@ namespace UnitTestProjectForComputerShop
             Order order = new Order();
             order.AddProduct(new Ram(25, "corsair"));
             ValidateStatus validateStatus = new ValidateStatus(order.products);
-            CheckoutProcess checkoutProcess = new CheckoutProcess(order);
+            CheckoutProcess checkoutProcess = new CheckoutProcess(order, new Address("12 avenue de paris", "Chatillon", 92320), new CashPayment());
             double result = order.price;
 
             Assert.AreEqual(result, 3.42);
