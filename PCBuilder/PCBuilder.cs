@@ -9,61 +9,24 @@ namespace PcBuilder
     {
         private List<IOption> options = new List<IOption>();
         private int price { get; set; }
-        public IPcBuilder addScreenSize()
+        private Pc pc;
+
+        public PcBuilder(Pc pc)
         {
-            options.Add(new ScreenSize());
-            return this;
-        }
-        public IPcBuilder addProcessor()
-        {
-            options.Add(new CPU());
-            return this;
+            this.pc = pc;
         }
 
-        public IPcBuilder addRam()
+        public IPcBuilder addOption(IOption option)
         {
-            options.Add(new Ram());
-            return this;
-        }
-        public IPcBuilder addHddSize()
-        {
-            options.Add(new HddSize());
-            return this;
-        }
-        public IPcBuilder addVideoCard()
-        {
-            options.Add(new VideoCard());
-            return this;
-        }
-        public IPcBuilder addHeadphone()
-        {
-            options.Add(new Headphone());
-            return this;
-        }
-        public IPcBuilder addMouse()
-        {
-            options.Add(new Mouse());
-            return this;
-        }
-        public IPcBuilder addBag()
-        {
-            options.Add(new Bag());
-            return this;
-        }
-        public IPcBuilder addKeyboard()
-        {
-            options.Add(new Keyboard());
+            options.Add(option);
             return this;
         }
 
         public IProduct GetPc()
         {
-            return new Pc(options);
+            return pc;
         }
-        public int GetPrice()
-        {
-            return price ;
-        }
+
         public int CalculatePrice()
         {
             int result = this.price;
@@ -72,6 +35,7 @@ namespace PcBuilder
             {
                 result += option.price;
             }
+
             return result;
         }
 

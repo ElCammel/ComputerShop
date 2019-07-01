@@ -7,17 +7,8 @@ namespace PcBuilder
 {
     public interface IPcBuilder
     {
-        IPcBuilder addScreenSize();
-        IPcBuilder addProcessor();
-        IPcBuilder addRam();
-        IPcBuilder addHddSize();
-        IPcBuilder addVideoCard();
-        IPcBuilder addHeadphone();
-        IPcBuilder addMouse();
-        IPcBuilder addBag();
-        IPcBuilder addKeyboard();
+        IPcBuilder addOption(IOption IOption);
         IProduct GetPc();
-        int GetPrice();
         int CalculatePrice();
     }
 }
