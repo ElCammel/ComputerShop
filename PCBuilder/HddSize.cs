@@ -13,5 +13,16 @@ namespace PcBuilder
         public int price { get; set; }
         public string name { get; set; }
 
+        public HddSize(int price, string name)
+        {
+            this.price = price;
+            this.name = name;
+        }
+
+        public int GetPrice()
+        {
+            return this.price;
+        }
+
     }
 }
