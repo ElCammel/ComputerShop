@@ -11,26 +11,28 @@ namespace UnitTestProjectForComputerShop
     public class PaymentServiceTest
     {
         [TestMethod]
-        public void shouldCashPrice()
+        public void shouldCalculateCashPrice()
         {
             IPayment cashPayment = new CashPayment();
-            Order order = new Order();
+            Order order = new Order(new ValidateStatus());
             order.AddProduct(new Ram(25, "corsair"));
-            ValidateStatus validateStatus = new ValidateStatus(order.products);
-            CheckoutProcess checkoutProcess = new CheckoutProcess(order, new Address("12 avenue de paris", "Chatillon", 92320), new CashPayment());
-            double result = order.price;
 
-            Assert.AreEqual(result, 3.42);
+            CheckoutProcess checkoutProcess = new CheckoutProcess(order, new Address("12 avenue de paris", "Chatillon", 92320), new CashPayment());
+            int result = checkoutProcess.GetOrderPaimentMethodPrice();
+
+            Assert.AreEqual(order.CalculatePrice(), 25);
         }
 
         [TestMethod]
-        public void shouldCalculateLuxembourgCreditPrice()
+        public void shouldCalculateCreditPrice()
         {
-            IPayment creditPaiement = new CreditPayment(2);
-            LuxembourgOrder order = new LuxembourgOrder(creditPaiement, 1, 2);
-            double result = order.calculatePrice();
+            Order order = new Order(new ValidateStatus());
+            order.AddProduct(new Ram(15, "corsair"));
 
-            Assert.AreEqual(result, 1.71);
+            CheckoutProcess checkoutProcess = new CheckoutProcess(order, new Address("12 avenue de paris", "Chatillon", 92320), new CreditPayment(3));
+            int result = checkoutProcess.GetOrderPaimentMethodPrice();
+
+            Assert.AreEqual(result, 5);
         }
     }
 }

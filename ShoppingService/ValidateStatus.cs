@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 using PcBuilder;
+
 namespace ShoppingService
 {
     public class ValidateStatus : OrderStatus
     {
 
-        private List<IProduct> products;
+        public List<IProduct> products { get; }
 
-        public ValidateStatus(List<IProduct> products)
+        public ValidateStatus()
         {
-            this.products = products;
+            this.products = new List<IProduct>();
         }
 
         public void AddProduct(IProduct product)

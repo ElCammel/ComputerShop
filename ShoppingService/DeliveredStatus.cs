@@ -8,11 +8,11 @@ namespace ShoppingService
     public class DeliveredStatus : OrderStatus
     {
 
-        private List<IProduct> products;
+        public List<IProduct> products { get; }
 
-        public DeliveredStatus(List<IProduct> products)
+        public DeliveredStatus()
         {
-            this.products = products;
+            this.products = new List<IProduct>();
         }
 
         public void AddProduct(IProduct product)
